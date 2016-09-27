@@ -20,7 +20,7 @@ done
 if [ ! -d "$SYSTEM_NAME" ]; then
     mkdir ${SYSTEM_NAME}
 fi
-echo "Name being used is $SYSTEM_NAME" >&2
+echo "save to $SYSTEM_NAME" >&2
 dpkg --get-selections > ./${SYSTEM_NAME}/Package.list
 sudo cp -R /etc/apt/sources.list* ./${SYSTEM_NAME}
 sudo apt-key exportall > ./${SYSTEM_NAME}/Repo.keys
