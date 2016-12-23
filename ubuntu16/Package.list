@@ -70,6 +70,7 @@ base-files					install
 base-passwd					install
 bash						install
 bash-completion					install
+bbswitch-dkms					install
 bc						install
 bind9-host					install
 binfmt-support					install
@@ -175,6 +176,7 @@ diffstat					install
 diffutils					install
 dirmngr						install
 distro-info-data				install
+dkms						install
 dmidecode					install
 dmsetup						install
 dmz-cursor-theme				install
@@ -190,6 +192,7 @@ dosfstools					install
 dpkg						install
 dpkg-dev					install
 dput						install
+dselect						install
 duplicity					install
 dvd+rw-tools					install
 e2fslibs:amd64					install
@@ -427,7 +430,6 @@ grub2-common					install
 gsettings-desktop-schemas			install
 gsettings-ubuntu-schemas			install
 gsfonts						install
-gstreamer0.10-plugins-base:amd64		deinstall
 gstreamer1.0-alsa:amd64				install
 gstreamer1.0-clutter-3.0			install
 gstreamer1.0-fluendo-mp3:amd64			install
@@ -477,6 +479,8 @@ hunspell-en-za					install
 hunspell-fr					install
 hunspell-fr-classical				install
 hwdata						install
+hydrogen					install
+hydrogen-drumkits				install
 hyphen-en-us					install
 hyphen-fr					install
 i965-va-driver:amd64				install
@@ -576,6 +580,7 @@ language-selector-common			install
 language-selector-gnome				install
 laptop-detect					install
 less						install
+lib32gcc1					install
 lib32z1						install
 liba11y-profile-manager-0.1-0:amd64		install
 liba11y-profile-manager-data			install
@@ -762,7 +767,6 @@ libcap2-bin					install
 libcc1-0:amd64					install
 libccolamd2.8.0:amd64				deinstall
 libccolamd2.9.1:amd64				install
-libcdaudio1:amd64				deinstall
 libcddb2					install
 libcdi-api-java					install
 libcdio-cdda1:amd64				install
@@ -836,6 +840,7 @@ libcryptsetup4:amd64				install
 libcrystalhd3:amd64				install
 libcrystalhd3:i386				install
 libctemplate2v5					install
+libcuda1-367					install
 libcuneiform0:amd64				install
 libcups2:amd64					install
 libcups2:i386					install
@@ -1304,6 +1309,7 @@ libjack-jackd2-0:amd64				install
 libjack-jackd2-0:i386				install
 libjansi-java					install
 libjansi-native-java				install
+libjansson4:amd64				install
 libjasper1:amd64				install
 libjavascriptcoregtk-3.0-0:amd64		install
 libjavascriptcoregtk-4.0-18:amd64		install
@@ -1536,7 +1542,6 @@ libmetacity-private3a:amd64			install
 libmhash2:amd64					install
 libmime-lite-perl				install
 libmime-types-perl				install
-libmimic0:amd64					deinstall
 libminiupnpc10:amd64				install
 libminizip1:amd64				install
 libmirclient9:amd64				install
@@ -1545,7 +1550,6 @@ libmirprotobuf3:amd64				install
 libmission-control-plugins0:amd64		install
 libmjpegutils-2.1-0				install
 libmm-glib0:amd64				install
-libmms0:amd64					deinstall
 libmng2:amd64					install
 libmng2:i386					install
 libmnl0:amd64					install
@@ -1783,6 +1787,7 @@ libpoppler52:amd64				deinstall
 libpoppler58:amd64				install
 libpopt0:amd64					install
 libportaudio2:amd64				install
+libportmidi0					install
 libportsmf0v5:amd64				install
 libpostproc-ffmpeg53:amd64			install
 libpostproc-ffmpeg53:i386			install
@@ -1949,6 +1954,7 @@ librtaudio4v5:amd64				install
 librtmidi2v5:amd64				install
 librtmp1:amd64					install
 librtmp1:i386					install
+librubberband2v5:amd64				install
 libruby2.1:amd64				deinstall
 libruby2.3:amd64				install
 libsamplerate0:amd64				install
@@ -2370,6 +2376,7 @@ libxml2-dev:amd64				install
 libxml2-utils					install
 libxmu6:amd64					install
 libxmuu1:amd64					install
+libxnvctrl0					install
 libxom-java					install
 libxpm4:amd64					install
 libxpp2-java					install
@@ -2405,7 +2412,6 @@ libyaml-cpp0.5v5:amd64				install
 libyaml-libyaml-perl				install
 libyaml-tiny-perl				install
 libyelp0:amd64					install
-libzbar0:amd64					deinstall
 libzeitgeist-1.0-1:amd64			install
 libzeitgeist-2.0-0:amd64			install
 libzephyr4:amd64				install
@@ -2427,14 +2433,10 @@ linux-firmware					install
 linux-generic					install
 linux-headers-4.4.0-22				install
 linux-headers-4.4.0-22-generic			install
-linux-headers-4.4.0-45				install
-linux-headers-4.4.0-45-generic			install
-linux-headers-4.4.0-47				install
-linux-headers-4.4.0-47-generic			install
-linux-headers-4.4.0-51				install
-linux-headers-4.4.0-51-generic			install
 linux-headers-4.4.0-53				install
 linux-headers-4.4.0-53-generic			install
+linux-headers-4.4.0-57				install
+linux-headers-4.4.0-57-generic			install
 linux-headers-generic				install
 linux-image-4.2.0-16-generic			deinstall
 linux-image-4.2.0-27-generic			deinstall
@@ -2451,10 +2453,11 @@ linux-image-4.4.0-36-generic			deinstall
 linux-image-4.4.0-38-generic			deinstall
 linux-image-4.4.0-42-generic			deinstall
 linux-image-4.4.0-43-generic			deinstall
-linux-image-4.4.0-45-generic			install
-linux-image-4.4.0-47-generic			install
-linux-image-4.4.0-51-generic			install
+linux-image-4.4.0-45-generic			deinstall
+linux-image-4.4.0-47-generic			deinstall
+linux-image-4.4.0-51-generic			deinstall
 linux-image-4.4.0-53-generic			install
+linux-image-4.4.0-57-generic			install
 linux-image-extra-4.2.0-16-generic		deinstall
 linux-image-extra-4.2.0-27-generic		deinstall
 linux-image-extra-4.2.0-30-generic		deinstall
@@ -2470,10 +2473,11 @@ linux-image-extra-4.4.0-36-generic		deinstall
 linux-image-extra-4.4.0-38-generic		deinstall
 linux-image-extra-4.4.0-42-generic		deinstall
 linux-image-extra-4.4.0-43-generic		deinstall
-linux-image-extra-4.4.0-45-generic		install
-linux-image-extra-4.4.0-47-generic		install
-linux-image-extra-4.4.0-51-generic		install
+linux-image-extra-4.4.0-45-generic		deinstall
+linux-image-extra-4.4.0-47-generic		deinstall
+linux-image-extra-4.4.0-51-generic		deinstall
 linux-image-extra-4.4.0-53-generic		install
+linux-image-extra-4.4.0-57-generic		install
 linux-image-generic				install
 linux-libc-dev:amd64				install
 linux-signed-generic				install
@@ -2491,20 +2495,17 @@ linux-signed-image-4.4.0-36-generic		deinstall
 linux-signed-image-4.4.0-38-generic		deinstall
 linux-signed-image-4.4.0-42-generic		deinstall
 linux-signed-image-4.4.0-43-generic		deinstall
-linux-signed-image-4.4.0-45-generic		install
-linux-signed-image-4.4.0-47-generic		install
-linux-signed-image-4.4.0-51-generic		install
+linux-signed-image-4.4.0-45-generic		deinstall
+linux-signed-image-4.4.0-47-generic		deinstall
+linux-signed-image-4.4.0-51-generic		deinstall
 linux-signed-image-4.4.0-53-generic		install
+linux-signed-image-4.4.0-57-generic		install
 linux-signed-image-generic			install
 linux-sound-base				install
-linux-tools-4.4.0-45				install
-linux-tools-4.4.0-45-generic			install
-linux-tools-4.4.0-47				install
-linux-tools-4.4.0-47-generic			install
-linux-tools-4.4.0-51				install
-linux-tools-4.4.0-51-generic			install
 linux-tools-4.4.0-53				install
 linux-tools-4.4.0-53-generic			install
+linux-tools-4.4.0-57				install
+linux-tools-4.4.0-57-generic			install
 linux-tools-common				install
 linux-tools-virtual				install
 lmms						install
@@ -2615,6 +2616,12 @@ npm						deinstall
 ntfs-3g						install
 ntrack-module-libnl-0				install
 nux-tools					install
+nvidia-361					install
+nvidia-367					install
+nvidia-opencl-icd-367				install
+nvidia-prime					install
+nvidia-settings					install
+ocl-icd-libopencl1:amd64			install
 ocrfeeder					install
 odbc-mdbtools:amd64				install
 odbc-postgresql:amd64				install
@@ -2626,6 +2633,7 @@ onboard						install
 onboard-data					install
 oneconf						install
 oneconf-common					install
+openbazaar					install
 openjdk-7-jre-headless:amd64			deinstall
 openjdk-8-jdk:amd64				install
 openjdk-8-jdk-headless:amd64			install
@@ -2988,6 +2996,7 @@ rpm2cpio					install
 rsync						install
 rsyslog						install
 rtkit						install
+rubberband-cli					install
 ruby						install
 ruby-did-you-mean				install
 ruby-minitest					install
@@ -3009,6 +3018,7 @@ sbuild						install
 schroot						install
 schroot-common					install
 screen						install
+screen-resolution-extra				install
 seahorse					install
 secureboot-db					install
 sed						install
@@ -3117,8 +3127,7 @@ ttf-indic-fonts-core				deinstall
 ttf-ubuntu-font-family				install
 tzdata						install
 ubuntu-artwork					install
-ubuntu-core-launcher				install
-ubuntu-desktop					install
+ubuntu-core-launcher				deinstall
 ubuntu-docs					install
 ubuntu-drivers-common				install
 ubuntu-fan					deinstall
@@ -3244,9 +3253,9 @@ wireshark-qt					install
 wkhtmltopdf					install
 wodim						install
 wpasupplicant					install
-x11-apps					install
+x11-apps					deinstall
 x11-common					install
-x11-session-utils				install
+x11-session-utils				deinstall
 x11-utils					install
 x11-xkb-utils					install
 x11-xserver-utils				install
@@ -3267,11 +3276,10 @@ xfonts-base					install
 xfonts-encodings				install
 xfonts-scalable					install
 xfonts-utils					install
-xinit						install
+xinit						deinstall
 xinput						install
 xkb-data					install
 xml-core					install
-xorg						install
 xorg-docs-core					install
 xorg-sgml-doctools				install
 xournal						install
